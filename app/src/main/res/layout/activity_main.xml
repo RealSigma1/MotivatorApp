@@ -1,67 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp"
-    android:background="@color/black">
+    android:padding="24dp"
+    android:background="@drawable/bg_gradient_dark">
+
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motivator app"
+        android:textSize="28sp"
+        android:textColor="#FFD700"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:shadowColor="#B8860B"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
 
     <TextView
         android:id="@+id/savedCountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Сохранено: 0 цитат"
-        android:textSize="16sp"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="10dp" />
+        android:textSize="14sp"
+        android:textColor="#B0B0B0"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium" />
 
-    <TextView
-        android:id="@+id/quoteTextView"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Здесь будет цитата"
-        android:textSize="24sp"
-        android:textColor="@android:color/white"
-        android:fontFamily="@font/pacifico"
-        android:gravity="center"
-        android:padding="20dp"
-        android:background="@drawable/quote_background"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="28dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#2A2A2A">
 
-    <Button
+        <TextView
+            android:id="@+id/quoteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Здесь будет цитата"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/serari_reg"
+            android:gravity="center"
+            android:padding="28dp"
+            android:lineSpacingMultiplier="1.4" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/nextQuoteButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Следующая цитата"
-        android:backgroundTint="@color/teal_700"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="10dp" />
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="#37474F"
+        android:textColor="#ECEFF1"
+        app:rippleColor="#546E7A" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/favoriteButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Добавить в избранное"
-        android:backgroundTint="@color/purple_500"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="#FF6F61"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="10dp" />
+        app:rippleColor="#FF8A80" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/shareButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Поделиться"
-        android:backgroundTint="@color/orange"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"
+        app:cornerRadius="16dp"
+        android:backgroundTint="#81C784"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="10dp" />
+        app:rippleColor="#A5D6A7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/favoritesButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Открыть избранное"
-        android:backgroundTint="@color/blue"
-        android:textColor="@android:color/white" />
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        app:cornerRadius="16dp"
+        android:backgroundTint="#BA68C8"
+        android:textColor="@android:color/white"
+        app:rippleColor="#CE93D8" />
 
 </LinearLayout>
